@@ -1,0 +1,43 @@
+  <div class="filters" role="group" aria-label="Filter the timeline">
+    <div class="fg"><label for="fPres">Under president</label>
+      <select id="fPres"><option value="all">All presidents</option></select>
+    </div>
+    <div class="fg"><span class="lab">Direction</span>
+      <div class="chips" id="fDir">
+        <button type="button" data-v="all" aria-pressed="true">All</button>
+        <button type="button" data-v="gain" aria-pressed="false"><span class="g">&#9650;</span> Rights gained</button>
+        <button type="button" data-v="loss" aria-pressed="false"><span class="l">&#9660;</span> Rights lost</button>
+        <button type="button" data-v="mixed" aria-pressed="false"><span class="m">&#9670;</span> Mixed</button>
+      </div>
+    </div>
+    <div class="fg"><span class="lab">Who acted</span>
+      <div class="chips" id="fWho">
+        <button type="button" data-v="all" aria-pressed="true">All</button>
+        <button type="button" data-v="President" aria-pressed="false">President</button>
+        <button type="button" data-v="Congress" aria-pressed="false">Congress</button>
+        <button type="button" data-v="Courts" aria-pressed="false">Courts</button>
+        <button type="button" data-v="Agencies" aria-pressed="false">Agencies</button>
+      </div>
+    </div>
+  </div>
+  <div class="tools">
+    <span id="count" aria-live="polite"></span>
+    <span><button type="button" class="linkbtn" id="openAll">Open all</button> &nbsp;&middot;&nbsp; <button type="button" class="linkbtn" id="closeAll">Close all</button> &nbsp;&middot;&nbsp; <button type="button" class="linkbtn" id="reset">Reset filters</button></span>
+  </div>
+
+  <div class="grid">
+    <div id="tlMain"></div>
+
+    <aside class="meter" aria-label="Share of the federal workforce in a bargaining unit">
+      <h2>Share of the federal workforce in a bargaining unit</h2>
+      <div class="yr" id="mYear">1883</div>
+      <div class="val" id="mVal">No bargaining rights</div>
+      <svg id="chart" viewBox="0 0 300 176" role="img" aria-label="Line chart: share of the federal workforce in a bargaining unit, about 59 percent in 1997, 60 percent in 2014, 56 percent at the start of 2025, 38 percent in January 2026 and 34.8 percent in June 2026."></svg>
+      <p class="note">Solid line: OPM figures (1997, 2014, 2025, 2026), drawn from different OPM reports, so compare with care. Dashed line: 1962 to 1996 not yet compiled. Postal workers are under a separate law and are not counted.</p>
+      <div class="legend">
+        <span><b class="c-gain">&#9650;</b>Rights gained</span>
+        <span><b class="c-loss">&#9660;</b>Rights lost</span>
+        <span><b class="c-mixed">&#9670;</b>Mixed or neutral</span>
+      </div>
+    </aside>
+  </div>
