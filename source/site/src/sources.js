@@ -99,7 +99,27 @@ window.SOURCES={
  usc7114:["5 U.S.C. 7114, representation rights and duties","https://www.law.cornell.edu/uscode/text/5/7114"],
  usc7115:["5 U.S.C. 7115, allotments to representatives","https://www.law.cornell.edu/uscode/text/5/7115"],
  usc7116:["5 U.S.C. 7116, unfair labor practices","https://www.law.cornell.edu/uscode/text/5/7116"],
- usc7311:["5 U.S.C. 7311, loyalty and striking","https://www.law.cornell.edu/uscode/text/5/7311"]
+ usc7311:["5 U.S.C. 7311, loyalty and striking","https://www.law.cornell.edu/uscode/text/5/7311"],
+ cbo78:["Congressional Budget Office, testimony on readiness of the Army reserve components, House Armed Services Committee (February 17, 1978)","https://webarchive.library.unt.edu/web/20090830202632/http://cbo.gov/ftpdocs/52xx/doc5263/doc08.pdf"],
+ gaotech82:["GAO, Information on Military Technician Conversions to Full-Time Active Duty Guard and Reserve, FPCD-82-57 (September 8, 1982)","https://www.gao.gov/products/fpcd-82-57"],
+ gao14:["GAO-14-711R, on the Defense Department's December 2013 report to Congress on active and reserve unit costs","https://www.gao.gov/products/gao-14-711r"],
+ cna13:["CNA, Report on the Termination of Military Technician as a Distinct Personnel Management Category, final report to Congress (September 2013)",""],
+ eo13203:["Executive Order 13203, February 17, 2001 (American Presidency Project)","https://www.presidency.ucsb.edu/documents/executive-order-13203-revocation-executive-order-and-presidential-memorandum-concerning"],
+ eo13812:["Executive Order 13812, Federal Register, October 4, 2017","https://www.govinfo.gov/content/pkg/FR-2017-10-04/pdf/2017-21559.pdf"],
+ eo13836:["Executive Order 13836, Federal Register, June 1, 2018","https://www.govinfo.gov/content/pkg/FR-2018-06-01/html/2018-11913.htm"],
+ lameduck:["Presidential memorandum on collective bargaining agreements, January 31, 2025, 90 Fed. Reg. 9581","https://govinfo.gov/content/pkg/FR-2025-02-14/pdf/2025-02729.pdf"],
+ flra7466:["NTEU and Federal Trade Commission, 74 FLRA No. 66","https://www.flra.gov/decisions/v74/74-66"],
+ fsip21:["Government Executive, Biden demands resignations from the Impasses Panel (February 2021)","https://www.govexec.com/management/2021/02/biden-demands-resignations-impasses-panel/171807/?oref=ge-next-story"],
+ blawfsip:["Bloomberg Law, Biden cleans house at the labor impasse panel (February 3, 2021)","https://news.bloomberglaw.com/daily-labor-report/biden-cleans-house-at-labor-impasse-panel-after-union-complaints"],
+ usc7101:["5 U.S.C. 7101, findings and purpose","https://www.law.cornell.edu/uscode/text/5/7101"],
+ usc7117:["5 U.S.C. 7117, duty to bargain; government-wide rules","https://www.law.cornell.edu/uscode/text/5/7117"],
+ usc7118:["5 U.S.C. 7118, unfair labor practice procedures and remedies","https://www.law.cornell.edu/uscode/text/5/7118"],
+ usc7119:["5 U.S.C. 7119, negotiation impasses; Federal Service Impasses Panel","https://www.law.cornell.edu/uscode/text/5/7119"],
+ usc7122:["5 U.S.C. 7122, exceptions to arbitral awards","https://www.law.cornell.edu/uscode/text/5/7122"],
+ usc7123:["5 U.S.C. 7123, judicial review; enforcement","https://www.law.cornell.edu/uscode/text/5/7123"],
+ usc7513:["5 U.S.C. 7513, cause and procedure for removals","https://www.law.cornell.edu/uscode/text/5/7513"],
+ usc1918:["18 U.S.C. 1918, penalty for striking against the government","https://www.law.cornell.edu/uscode/text/18/1918"],
+ usc39_1209:["39 U.S.C. 1209, federal labor laws applied to the Postal Service","https://www.law.cornell.edu/uscode/text/39/1209"]
 };
 /* footnote marker for one or more source keys. Numbers are filled in after every page has rendered. */
 window.fn=function(keys){if(!keys)return"";if(typeof keys==="string")keys=[keys];return keys.map(function(k){return '<sup class="fn" data-k="'+k+'"></sup>';}).join("");};
