@@ -32,9 +32,9 @@ body{font-family:'Libre Franklin',Arial,sans-serif;color:#121212;font-size:9.3pt
 .mast{display:flex;justify-content:space-between;align-items:center;padding-bottom:9px;border-bottom:3px solid #0b2a55}
 .mast img{height:44px}
 .mast div{text-align:right;font-size:7.6pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0b2a55;line-height:1.5}
-.mast div span{display:block;font-weight:600;color:#7a5a08}
-.gold{height:2px;background:#b8891a;margin-top:2px}
-.kicker{font-size:7.6pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7a5a08;margin-top:13px}
+.mast div span{display:block;font-weight:600;color:#b45f00}
+.gold{height:2px;background:#ff9e0b;margin-top:2px}
+.kicker{font-size:7.6pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b45f00;margin-top:13px}
 h1{font-family:'Playfair Display',Georgia,serif;font-weight:800;font-size:19.5pt;line-height:1.1;letter-spacing:-.01em;margin:5px 0 7px}
 .deck{font-family:'Source Serif 4',Georgia,serif;font-size:11pt;line-height:1.4;color:#2a2a2a;margin:0 0 10px;max-width:6.9in}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #121212;border-bottom:1px solid #dcdfe4;margin-bottom:11px}
@@ -50,7 +50,7 @@ ul{margin:0;padding:0;list-style:none}
 li{font-family:'Source Serif 4',Georgia,serif;font-size:10pt;line-height:1.4;color:#2a2a2a;padding:4.5px 0;border-top:1px solid #dcdfe4}
 li:first-child{border-top:0;padding-top:1px}
 li b{font-family:'Libre Franklin',Arial,sans-serif;font-size:8.8pt;color:#121212}
-.ask{background:#0b2a55;color:#fff;border-top:3px solid #b8891a;border-radius:5px;padding:11px 14px 12px;margin-bottom:11px}
+.ask{background:#0b2a55;color:#fff;border-top:3px solid #ff9e0b;border-radius:5px;padding:11px 14px 12px;margin-bottom:11px}
 .ask h3{font-family:'Playfair Display',Georgia,serif;font-size:15pt;line-height:1.1;margin:0 0 6px}
 .ask ol{margin:0;padding-left:1.25em}
 .ask li{color:#fff;border:0;padding:2.5px 0;font-size:10.2pt}
@@ -68,7 +68,7 @@ table.glance td{padding:3.5px 8px 3.5px 0;font-size:9.3pt}
 table.glance{border-top:2px solid #0b2a55}
 table.glance th{padding-top:6px}
 .tight li{padding:3.5px 0;font-size:9.7pt}
-td.p span{display:block;font-size:7pt;letter-spacing:.1em;text-transform:uppercase;color:#7a5a08;font-weight:700}
+td.p span{display:block;font-size:7pt;letter-spacing:.1em;text-transform:uppercase;color:#b45f00;font-weight:700}
 .claims{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:16px .3in;align-content:start}
 .claim{border-top:2px solid #0b2a55;padding-top:6px}
 .claim .l{font-size:7pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#555d6b}

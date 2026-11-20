@@ -40,16 +40,16 @@ fonts="".join([font("Playfair Display","playfair-display/files/playfair-display-
 logo="data:image/png;base64,"+base64.b64encode((root/"assets"/"logo.png").read_bytes()).decode()
 og='''<!DOCTYPE html><html><head><meta charset="utf-8"><style>%s
 *{box-sizing:border-box}body{margin:0;width:1200px;height:630px;background:#fff;color:#111;font-family:'Source Serif 4',serif;position:relative;overflow:hidden}
-.top{height:14px;background:#0b2a55;border-bottom:4px solid #b8891a}
+.top{height:14px;background:#0b2a55;border-bottom:4px solid #ff9e0b}
 .in{padding:44px 64px 0}
 img{height:74px;display:block}
-.k{font-family:'Libre Franklin',sans-serif;font-weight:700;font-size:19px;letter-spacing:.16em;text-transform:uppercase;color:#7a5a08;margin-top:40px}
+.k{font-family:'Libre Franklin',sans-serif;font-weight:700;font-size:19px;letter-spacing:.16em;text-transform:uppercase;color:#b45f00;margin-top:40px}
 h1{font-family:'Playfair Display',serif;font-weight:800;font-size:62px;line-height:1.08;margin:12px 0 0;letter-spacing:-.005em}
 p{font-size:27px;line-height:1.35;color:#333;margin:20px 0 0;max-width:960px}
 .ft{position:absolute;left:64px;right:64px;bottom:34px;border-top:3px solid #0b2a55;padding-top:14px;font-family:'Libre Franklin',sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;color:#0b2a55;display:flex;justify-content:space-between}
 </style></head><body><div class="top"></div><div class="in"><img src="%s"><div class="k">Federal collective bargaining reform</div><h1>One signature took bargaining rights from a million federal workers.</h1><p>The record, every hole in the law, and the bill to close them.</p></div><div class="ft"><span>REFORM.LOCAL1776.ORG</span><span>LIUNA LOCAL 1776</span></div></body></html>'''%(fonts,logo)
 fav='''<!DOCTYPE html><html><head><meta charset="utf-8"><style>%s
-body{margin:0;width:64px;height:64px;background:#0b2a55;border-top:6px solid #b8891a;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:800;font-size:27px;color:#fff;letter-spacing:-.02em}</style></head><body>71</body></html>'''%fonts
+body{margin:0;width:64px;height:64px;background:#0b2a55;border-top:6px solid #ff9e0b;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:800;font-size:27px;color:#fff;letter-spacing:-.02em}</style></head><body>71</body></html>'''%fonts
 pathlib.Path("/tmp/og.html").write_text(og); pathlib.Path("/tmp/fav.html").write_text(fav)
 from playwright.async_api import async_playwright
 async def shots():

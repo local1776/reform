@@ -23,14 +23,14 @@ Array.prototype.forEach.call(document.querySelectorAll("#nav a"),function(a){a.s
 (function(){
   var yrs=["FY2028","FY2029","FY2030","FY2031","FY2032"], A=[10,25,46,69,98], B=[0,28,56,85,113];
   var W=460,H=262,L=34,B0=30,T=20,max=125,pw=(W-L-6)/yrs.length,bw=27,gap=2;
-  var s='<div class="clg"><span><i style="background:#0b2a55"></i>Pentagon resource table</span><span><i style="background:#b8891a"></i>Local 1776, conservative model</span></div>';
+  var s='<div class="clg"><span><i style="background:#0b2a55"></i>Pentagon resource table</span><span><i style="background:#ff9e0b"></i>Local 1776, conservative model</span></div>';
   s+='<svg class="vb" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Net added cost by fiscal year. Pentagon: 10, 25, 46, 69 and 98 million dollars. Local 1776 conservative model: 0, 28, 56, 85 and 113 million dollars.">';
   [0,25,50,75,100,125].forEach(function(v){var y=T+(H-T-B0)*(1-v/max);
     s+='<line x1="'+L+'" x2="'+(W-6)+'" y1="'+y+'" y2="'+y+'" stroke="'+(v?"#e6e9ee":"#121212")+'" stroke-width="1"/><text x="'+(L-6)+'" y="'+(y+3.5)+'" text-anchor="end" font-size="10.5" fill="#5f6672">'+v+'</text>';});
   function bar(x,v,fill,lab){var h=(H-T-B0)*v/max,y=H-B0-h; if(v<=0) return '<text x="'+(x+bw/2)+'" y="'+(H-B0-6)+'" text-anchor="middle" font-size="10.5" font-weight="700" fill="#121212">$0</text>';
     return '<path d="M'+x+' '+(H-B0)+'V'+(y+4)+'a4 4 0 0 1 4-4h'+(bw-8)+'a4 4 0 0 1 4 4V'+(H-B0)+'z" fill="'+fill+'"><title>'+lab+': $'+v+' million</title></path><text x="'+(x+bw/2)+'" y="'+(y-5)+'" text-anchor="middle" font-size="10.5" font-weight="700" fill="#121212">$'+v+'</text>';}
   yrs.forEach(function(yr,i){var x0=L+pw*i+(pw-(bw*2+gap))/2;
-    s+=bar(x0,A[i],"#0b2a55","Pentagon, "+yr)+bar(x0+bw+gap,B[i],"#b8891a","Local 1776, "+yr)+'<text x="'+(x0+bw+gap/2)+'" y="'+(H-B0+16)+'" text-anchor="middle" font-size="11" fill="#5f6672">'+yr+'</text>';});
+    s+=bar(x0,A[i],"#0b2a55","Pentagon, "+yr)+bar(x0+bw+gap,B[i],"#ff9e0b","Local 1776, "+yr)+'<text x="'+(x0+bw+gap/2)+'" y="'+(H-B0+16)+'" text-anchor="middle" font-size="11" fill="#5f6672">'+yr+'</text>';});
   $("figAgr").innerHTML=s+'</svg>';
 })();
 
@@ -38,13 +38,13 @@ Array.prototype.forEach.call(document.querySelectorAll("#nav a"),function(a){a.s
 (function(){
   var n=[0,0,1,2,3,4,5,6,7,8,9,10], C=n.map(function(k){return 28.21211*k;}), S=n.map(function(k){return 45.139376*k;});
   var W=460,H=270,L=36,R=58,B0=30,T=16,max=500,x=function(i){return L+(W-L-R)*i/11;},y=function(v){return T+(H-T-B0)*(1-v/max);};
-  var s='<div class="clg"><span><i style="background:#0b2a55"></i>Conservative, $10,000 per position</span><span><i style="background:#b8891a"></i>Sensitivity, $16,000 per position</span></div>';
+  var s='<div class="clg"><span><i style="background:#0b2a55"></i>Conservative, $10,000 per position</span><span><i style="background:#ff9e0b"></i>Sensitivity, $16,000 per position</span></div>';
   s+='<svg class="vb" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Added cost per year rises from zero in fiscal 2028 to 282 million dollars in fiscal 2038 in the conservative scenario and 451 million in the sensitivity scenario.">';
   [0,100,200,300,400,500].forEach(function(v){s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y(v)+'" y2="'+y(v)+'" stroke="'+(v?"#e6e9ee":"#121212")+'" stroke-width="1"/><text x="'+(L-6)+'" y="'+(y(v)+3.5)+'" text-anchor="end" font-size="10.5" fill="#5f6672">'+v+'</text>';});
   [[0,"FY27"],[2,"FY29"],[5,"FY32"],[8,"FY35"],[11,"FY38"]].forEach(function(a){s+='<text x="'+x(a[0])+'" y="'+(H-B0+16)+'" text-anchor="middle" font-size="11" fill="#5f6672">'+a[1]+'</text>';});
   function line(D,c){return '<polyline fill="none" stroke="'+c+'" stroke-width="2" stroke-linejoin="round" points="'+D.map(function(v,i){return x(i).toFixed(1)+","+y(v).toFixed(1);}).join(" ")+'"/>';}
-  s+=line(S,"#b8891a")+line(C,"#0b2a55");
-  s+='<circle cx="'+x(11)+'" cy="'+y(S[11])+'" r="4" fill="#b8891a" stroke="#fff" stroke-width="2"/><circle cx="'+x(11)+'" cy="'+y(C[11])+'" r="4" fill="#0b2a55" stroke="#fff" stroke-width="2"/>';
+  s+=line(S,"#ff9e0b")+line(C,"#0b2a55");
+  s+='<circle cx="'+x(11)+'" cy="'+y(S[11])+'" r="4" fill="#ff9e0b" stroke="#fff" stroke-width="2"/><circle cx="'+x(11)+'" cy="'+y(C[11])+'" r="4" fill="#0b2a55" stroke="#fff" stroke-width="2"/>';
   s+='<text x="'+(x(11)+9)+'" y="'+(y(S[11])+4)+'" font-size="12" font-weight="700" fill="#121212">$451M</text><text x="'+(x(11)+9)+'" y="'+(y(C[11])+4)+'" font-size="12" font-weight="700" fill="#121212">$282M</text>';
   n.forEach(function(k,i){s+='<rect x="'+(x(i)-13)+'" y="'+T+'" width="26" height="'+(H-T-B0)+'" fill="transparent"><title>FY'+(2027+i)+': $'+Math.round(C[i])+' million conservative, $'+Math.round(S[i])+' million sensitivity</title></rect>';});
   $("figModel").innerHTML=s+'</svg>';

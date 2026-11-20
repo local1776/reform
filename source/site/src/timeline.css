@@ -5,7 +5,7 @@
    Single light theme by choice. Deep red appears only on loss markers, never as text. */
 :root{
   --bg:#ffffff; --ink:#121212; --body-ink:#2a2a2a; --muted:#5f6672; --rule:#dcdfe4;
-  --navy:#0b2a55; --gold:#b8891a; --gold-text:#7a5a08; --red:#8c1c2c;
+  --navy:#0b2a55; --gold:#ff9e0b; --gold-text:#b45f00; --red:#8c1c2c;
   --paper:#ffffff; --surface:#ffffff; --accent:#0b2a55; --loss:#8c1c2c;
   --display:"Playfair Display",Georgia,"Times New Roman",serif;
   --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
