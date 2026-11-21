@@ -740,6 +740,14 @@ select{height:32px;padding:0 8px;font-size:12.5px}
 .logo-link:hover .logo{opacity:.82}
 .logo-link:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
 
+/* slim menu bar */
+.nav{border-bottom-width:1px}
+.nav .wrap{justify-content:flex-start;gap:23px}
+.nav a,.nav a:first-child{display:flex;flex-direction:column;align-items:center;padding:6px 0 4px;font-size:9.8px;line-height:13px;font-weight:400;letter-spacing:.09em;border-bottom-width:2px;opacity:.9}
+.nav a::after{content:attr(data-t);font-size:10.5px;font-weight:700;height:0;overflow:hidden;visibility:hidden;pointer-events:none}
+.nav a[aria-current="true"],.nav a[aria-current="true"]:first-child{font-size:10.5px;font-weight:700;opacity:1}
+@media (max-width:860px){.nav .wrap{gap:20px}.nav a,.nav a:first-child{font-size:9.4px}.nav a::after,.nav a[aria-current="true"],.nav a[aria-current="true"]:first-child{font-size:10px}}
+.nav a:first-child{align-items:flex-start}
 /* header buttons and menu bar width: same as www.local1776.org (Ben, Nov 21 2026) */
 .logo-link{max-width:none;min-width:0}
 .acts{display:flex;gap:4px;flex:none}
