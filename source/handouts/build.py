@@ -19,7 +19,9 @@ FONTS = "".join([
     font("Libre Franklin", "libre-franklin/files/libre-franklin-latin-600-normal.woff2", 600),
     font("Libre Franklin", "libre-franklin/files/libre-franklin-latin-700-normal.woff2", 700),
 ])
-LOGO = "data:image/png;base64," + base64.b64encode(pathlib.Path("/home/claude/cbsite/assets/logo_src.png").read_bytes()).decode()
+import os
+# the logo and Chrome can be pointed at with HANDOUT_LOGO / CHROME (defaults: the original build machine)
+LOGO = "data:image/png;base64," + base64.b64encode(pathlib.Path(os.environ.get("HANDOUT_LOGO", "/home/claude/cbsite/assets/logo_src.png")).read_bytes()).decode()
 buf = io.BytesIO(); segno.make(URL, error="m").save(buf, kind="png", scale=10, border=1, dark="#0b2a55")
 QR = "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()
 
@@ -255,7 +257,7 @@ DOCS = [("1", "The problem and the ask", P1, "1_The_Problem_and_the_Ask"), ("2",
 async def main():
     out = ROOT / "out"; out.mkdir(exist_ok=True)
     async with async_playwright() as p:
-        b = await p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+        b = await p.chromium.launch(executable_path=os.environ.get("CHROME", "/usr/bin/google-chrome"), args=["--no-sandbox"])
         G_URL = URL + "/#guard"
         JOBS = [(page(n, l, bd), f, "Chapter71_Handout_" + f) for n, l, bd, f in DOCS]
         JOBS.append((page("", "National Guard technician phaseout", P4, mast="National Guard Technicians", sub="Fiscal 2027 defense bill &middot; The technician phaseout", qrsrc=qr(G_URL), shown=URL_SHOWN + "/#guard", foot_h="Read the full analysis, charts and sources", foot_s="Scan the code with a phone camera. Every figure on this page is sourced on the site. Figures labeled Local 1776 are our own benchmarks from a June 2026 cost model. They are not an official score."), "Guard_Technician_Phaseout", "National_Guard_Handout_Technician_Phaseout"))
@@ -263,7 +265,7 @@ async def main():
             assert "—" not in html and "&mdash;" not in html
             (out / (fn + ".html")).write_text(html, encoding="utf-8")
             pg = await b.new_page(viewport={"width": 816, "height": 1056})
-            await pg.goto("file://" + str(out / (fn + ".html"))); await pg.wait_for_timeout(400)
+            await pg.goto((out / (fn + ".html")).as_uri()); await pg.wait_for_timeout(400)
             over = await pg.evaluate("(()=>{const f=document.querySelector('.foot').getBoundingClientRect();const m=Math.max(...[...document.querySelectorAll('.page *')].filter(e=>!e.closest('.foot')).map(e=>e.getBoundingClientRect().bottom));return [document.querySelector('.page').scrollHeight, Math.round(f.top), Math.round(m), Math.round(f.top-m)]})()")
             pdf = out / (pdfname + ".pdf")
             await pg.pdf(path=str(pdf), width="8.5in", height="11in", print_background=True, margin={"top": "0", "right": "0", "bottom": "0", "left": "0"})
